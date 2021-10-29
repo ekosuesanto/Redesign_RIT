@@ -60,7 +60,7 @@ class _SignInFormState extends State<SignInForm> {
                         ),
                         alignment: Alignment.centerLeft,
                       ),
-                      Container(child: Text("Already account? Please Sign In",style:TextStyle(fontSize:12)), 
+                      Container(child: Text("Already account? Please Sign In",style:TextStyle(fontSize:12))), 
                       SizedBox(
                         height: 40,
                       ),
