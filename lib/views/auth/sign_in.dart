@@ -27,9 +27,9 @@ class _SignInFormState extends State<SignInForm> {
     return LayoutBuilder(builder: (context, constraint) {
       return SingleChildScrollView(
         physics: ScrollPhysics(),
-        reverse: true,
+        reverse: false,
         primary:true, 
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.manual,
         child: ConstrainedBox(
           constraints: BoxConstraints(
             minHeight: constraint.maxHeight,
