@@ -28,11 +28,11 @@ class _SignInFormState extends State<SignInForm> {
       return SingleChildScrollView(
         physics: ScrollPhysics(),
         reverse: true,
-          
+        primary:true, 
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: ConstrainedBox(
           constraints: BoxConstraints(
-            minHeight: constraint.minHeight,
+            minHeight: constraint.maxHeight,
           ),
           child: IntrinsicHeight(
             child: Column(
