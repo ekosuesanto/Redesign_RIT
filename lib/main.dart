@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:rosalia_indah_transport/onboarding.dart';
-import 'package:rosalia_indah_transport/main_page.dart';
+import 'package:helloworld/onboarding.dart';
+import 'package:helloworld/main_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
