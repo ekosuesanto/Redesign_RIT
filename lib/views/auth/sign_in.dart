@@ -42,7 +42,7 @@ class _SignInFormState extends State<SignInForm> {
                 Container(
                   alignment: Alignment.bottomCenter,
                   width: MediaQuery.of(context).size.width,
-                  height: 300,
+                  height: 250,
                   child: Image(
                       image: AssetImage(
                           'assets/onboarding/one-week-before-your-employee-s-first-day.png')),
