@@ -63,8 +63,8 @@ class _SignInFormState extends State<SignInForm> {
                       SizedBox(height: 5), 
                       Container(child: Column(children: [ 
                           Text("Already account? Please Sign In",style:TextStyle(fontSize:12,color:Colors.grey[600])),
-                          Text("Sign In.",style:TextStyle(fontSize:12,color:Colors.grey[600], fontWeight: FontWeight.bold),),alignment: Alignment.centerLeft) 
-                      ]),
+                          Text("Sign In.",style:TextStyle(fontSize:12,color:Colors.grey[600], fontWeight: FontWeight.bold),)
+                      ]),alignment: Alignment.centerLeft),
                       SizedBox(
                         height: 40,
                       ),
