@@ -4,7 +4,10 @@ class RegisterView extends StatelessWidget {
     Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(body: SignUpForm()),
+      home: Scaffold(
+          appBar: AppBar(), 
+          body: SignUpForm() 
+      ),
     );
   }
 }
