@@ -6,6 +6,15 @@ class RegisterView extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           appBar: AppBar( 
+              leading: Builder(
+    builder: (BuildContext context) {
+      return IconButton(
+        icon: const Icon(Icons.arrow_left),
+        onPressed: () { Scaffold.of(context).openDrawer(); },
+        tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+      );
+    },
+  ),
               title: Text("Register") 
           ), 
           body: SignUpForm() 
