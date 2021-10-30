@@ -52,7 +52,7 @@ class _SignUpFormState extends State<SignUpForm> {
           ) 
         ), 
       ) ;
-     ) 
-     };
+      
+     });
   }
 }
