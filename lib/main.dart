@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    _newinstaller = _prefs.re((SharedPreferences prefs) {
+    _newinstaller = _prefs.then((SharedPreferences prefs) {
       return (prefs.getBool('new_installer') ?? true);
     });
   }
