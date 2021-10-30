@@ -162,28 +162,8 @@ class _SignInFormState extends State<SignInForm> {
 
                           (context, animation, secondaryAnimation, child) { 
 
-                        return ScaleTransition( 
-
-                          alignment: Alignment.center, 
-
-                          scale: Tween<double>(begin: 0.1, end: 1).animate( 
-
-                            CurvedAnimation( 
-
-                              parent: animation, 
-
-                              curve: Curves.linearToEaseOut, 
-
-                            ), 
-
-                          ), 
-
-                          child: child, 
-
-                        ); 
-
-                      }, 
-
+                        return 
+                          
                       transitionDuration: Duration(seconds: 2), 
 
                       pageBuilder: (BuildContext context, 
