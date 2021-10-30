@@ -54,53 +54,8 @@ class _SignUpFormState extends State<SignUpForm> {
 
   @override
   Widget build(BuildContext context) {
-      final steps = [
-      CoolStep(
-        title: 'Basic Information',
-        subtitle: 'Please fill some of the basic information to get started',
-        content: Form(
-          key: _formKey,
-          child: Column(
-            children: [
-              Container( child : Text("Text1")), 
-              Container( child : Text("Text2"))
-            ],
-          ),
-        ),
-        validation: () {
-          if (!_formKey.currentState!.validate()) {
-            return 'Fill form correctly';
-          }
-          return null;
-        },
-      ),
-      CoolStep(
-        title: 'Select your role',
-        subtitle: 'Choose a role that better defines you',
-        content: Container(
-          child: Row(
-            children: [
-              Container( child : Text("Text1")), 
-              Container( child : Text("Text2"))
-            ],
-          ),
-        ),
-        validation: () {
-          return null;
-        },
-      ),
-    ];
-
-    final stepper = CoolStepper(
-      showErrorSnackbar: false,
-      onCompleted: () {
-        print('Steps completed!');
-      },
-      steps: steps,
-      config: CoolStepperConfig(
-        backText: 'PREV',
-      ),
-    );
+      
+    
       return LayoutBuilder(builder: (context, constraint) {
       return SingleChildScrollView(
         physics: ScrollPhysics(),
@@ -123,7 +78,7 @@ class _SignUpFormState extends State<SignUpForm> {
                       ),
                       Container( 
                           
-                          child : stepper 
+                          child : Text("") 
                       ) , 
                       Container( 
                           child : Text("Column 3") 
