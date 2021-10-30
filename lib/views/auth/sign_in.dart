@@ -138,7 +138,7 @@ class _SignInFormState extends State<SignInForm> {
                             "Forgot credential?",
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
-                                color: Colors.grey[600] , fontWeight:FontWeight.Bold),
+                                color: Colors.grey[600] , fontWeight:FontWeight.bold),
                           ),
                         ),
                       ),
