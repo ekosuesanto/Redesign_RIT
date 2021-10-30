@@ -148,7 +148,7 @@ class _SignUpFormState extends State<SignUpForm> {
                       image: AssetImage( 'assets/onboarding/handing-out-offer-letter.png')),
                       ),
                       Container( 
-                          child : Text("Text dhdhhfhfhfhfhfhf e") 
+                          child : stepper
                       ) , 
                       Container( 
                           child : Text("Column 3") 
