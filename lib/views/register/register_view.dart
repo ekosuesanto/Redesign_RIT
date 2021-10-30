@@ -7,6 +7,11 @@ import 'package:helloworld/views/auth/sign_in.dart';
 class RegisterView extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.white,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        fontFamily: GoogleFonts.poppins().fontFamily,
+      ),
       debugShowCheckedModeBanner: false,
       home: Scaffold( 
           body: SignUpForm() 
@@ -43,9 +48,8 @@ class _SignUpFormState extends State<SignUpForm> {
                   width: MediaQuery.of(context).size.width,
                   height: 250,
                   child: Image(
-                      image: AssetImage(
-                          'assets/onboarding/handing-out-offer-letter.png')),
-                ),
+                      image: AssetImage( 'assets/onboarding/handing-out-offer-letter.png')),
+                      ),
                       Container( 
                           child : Text("Column 2") 
                       ) , 
