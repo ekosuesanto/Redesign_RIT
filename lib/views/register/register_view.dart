@@ -25,8 +25,33 @@ class SignUpForm extends StatefulWidget {
 class _SignUpFormState extends State<SignUpForm> {
   @override
   Widget build(BuildContext context) {
-      return Container( 
-          child: Text("Sign Up Screen") , 
+      return LayoutBuilder(builder: (context, constraint) {
+      return SingleChildScrollView(
+        physics: ScrollPhysics(),
+        reverse: false,
+        primary:true, 
+        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.manual,
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            minHeight: constraint.maxHeight,
+          ),
+          child: IntrinsicHeight( 
+              child : Column ( 
+                  children : [ 
+                      Container( 
+                          child : Text("Column 1") 
+                      ) , 
+                      Container( 
+                          child : Text("Column 2") 
+                      ) , 
+                      Container( 
+                          child : Text("Column 3") 
+                      ) , 
+                  ]
+              ) 
+          ) 
+        ), 
       ) ;
+     };
   }
 }
