@@ -158,41 +158,23 @@ class _SignUpFormState extends State<SignUpForm> {
         ), 
       ) ;
       });
-   Widget _buildSelector({
-    BuildContext? context,
-    required String name,
+   
+          
+    }
+    Widget _buildTextField({
+    String? labelText,
+    FormFieldValidator<String>? validator,
+    TextEditingController? controller,
   }) {
-    final isActive = name == selectedRole;
-
-    return Expanded(
-      child: AnimatedContainer(
-        duration: Duration(milliseconds: 200),
-        curve: Curves.easeInOut,
-        decoration: BoxDecoration(
-          color: isActive ? Theme.of(context!).primaryColor : null,
-          border: Border.all(
-            width: 0,
-          ),
-          borderRadius: BorderRadius.circular(8.0),
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 20.0),
+      child: TextFormField(
+        decoration: InputDecoration(
+          labelText: labelText,
         ),
-        child: RadioListTile(
-          value: name,
-          activeColor: Colors.white,
-          groupValue: selectedRole,
-          onChanged: (String? v) {
-            setState(() {
-              selectedRole = v;
-            });
-          },
-          title: Text(
-            name,
-            style: TextStyle(
-              color: isActive ? Colors.white : null,
-            ),
-          ),
-        ),
+        validator: validator,
+        controller: controller,
       ),
     );
   }
-    }
   }
