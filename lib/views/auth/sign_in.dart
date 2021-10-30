@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:helloworld/views/register/register_view.dart';
 
 class SignIn extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -83,7 +84,7 @@ class _SignInFormState extends State<SignInForm> {
                                     BorderRadius.all(Radius.circular(40.0))),
                             focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: Color(0xFFD2B4DE),
+                                    color:Colors.grey,
                                     width: 2.0,
                                     style: BorderStyle.solid),
                                 borderRadius:
@@ -114,7 +115,7 @@ class _SignInFormState extends State<SignInForm> {
                                     BorderRadius.all(Radius.circular(40.0))),
                             focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: Color(0xFFD2B4DE),
+                                    color: Colors.grey,
                                     width: 2.0,
                                     style: BorderStyle.solid),
                                 borderRadius:
@@ -129,7 +130,7 @@ class _SignInFormState extends State<SignInForm> {
                       ),
                       SizedBox(
                         height: 20,
-                      ),
+                      ) , 
                       GestureDetector(
                         onTap: () {},
                         child: Container(
@@ -137,8 +138,8 @@ class _SignInFormState extends State<SignInForm> {
                           child: Text(
                             "Forgot credential?",
                             style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xFFD2B4DE)),
+                                fontWeight: FontWeight.bold,
+                                color: Colors.grey[800] ),
                           ),
                         ),
                       ),
@@ -150,11 +151,59 @@ class _SignInFormState extends State<SignInForm> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             OutlinedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                  Navigator.push( 
+
+                    context, 
+
+                    PageRouteBuilder( 
+
+                      transitionsBuilder: 
+
+                          (context, animation, secondaryAnimation, child) { 
+
+                        return ScaleTransition( 
+
+                          alignment: Alignment.center, 
+
+                          scale: Tween<double>(begin: 0.1, end: 1).animate( 
+
+                            CurvedAnimation( 
+
+                              parent: animation, 
+
+                              curve: Curves.bounceIn, 
+
+                            ), 
+
+                          ), 
+
+                          child: child, 
+
+                        ); 
+
+                      }, 
+
+                      transitionDuration: Duration(seconds: 2), 
+
+                      pageBuilder: (BuildContext context, 
+
+                          Animation<double> animation, 
+
+                          Animation<double> secondaryAnimation) { 
+
+                        return RegisterView(); 
+
+                      }, 
+
+                    ), 
+
+                  ); 
+                              },
                               style: ButtonStyle(
                                 side: MaterialStateProperty.all<BorderSide>(
                                   BorderSide(
-                                      color: Colors.deepPurple.shade200,
+                                      color: Colors.grey.shade800,
                                       width: 2,
                                       style: BorderStyle.solid),
                                 ),
@@ -163,7 +212,7 @@ class _SignInFormState extends State<SignInForm> {
                                   RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(30),
                                     side: BorderSide(
-                                        color: Colors.deepPurple.shade200,
+                                        color: Colors.grey.shade800,
                                         width: 2,
                                         style: BorderStyle.solid),
                                   ),
@@ -183,7 +232,7 @@ class _SignInFormState extends State<SignInForm> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
-                                      color: Color(0xFF8E44AD)),
+                                      color: Colors.black),
                                 ),
                               ),
                             ),
@@ -194,14 +243,14 @@ class _SignInFormState extends State<SignInForm> {
                               style: ButtonStyle(
                                   backgroundColor:
                                       MaterialStateProperty.all<Color>(
-                                          Colors.deepPurple.shade400),
+                                          Colors.black),
                                   shape: MaterialStateProperty.all<
                                           RoundedRectangleBorder>(
                                       RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(30),
                                           side: BorderSide(
-                                              color: Colors.black12)))),
+                                              color: Colors.white)))),
                               onPressed: () {},
                               child: Container(
                                 width:
