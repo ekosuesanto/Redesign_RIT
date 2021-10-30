@@ -38,9 +38,14 @@ class _SignUpFormState extends State<SignUpForm> {
           child: IntrinsicHeight( 
               child : Column ( 
                   children : [ 
-                      Container( 
-                          child : Text("Column 1") 
-                      ) , 
+                      Container(
+                  alignment: Alignment.bottomCenter,
+                  width: MediaQuery.of(context).size.width,
+                  height: 250,
+                  child: Image(
+                      image: AssetImage(
+                          'assets/onboarding/handing-out-offer-letter.png')),
+                ),
                       Container( 
                           child : Text("Column 2") 
                       ) , 
