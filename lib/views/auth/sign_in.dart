@@ -154,7 +154,7 @@ class _SignInFormState extends State<SignInForm> {
                               style: ButtonStyle(
                                 side: MaterialStateProperty.all<BorderSide>(
                                   BorderSide(
-                                      color: Colors.deepPurple.shade200,
+                                      color: Colors.grey.shade800,
                                       width: 2,
                                       style: BorderStyle.solid),
                                 ),
@@ -163,7 +163,7 @@ class _SignInFormState extends State<SignInForm> {
                                   RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(30),
                                     side: BorderSide(
-                                        color: Colors.deepPurple.shade200,
+                                        color: Colors.grey.shade800,
                                         width: 2,
                                         style: BorderStyle.solid),
                                   ),
@@ -194,14 +194,14 @@ class _SignInFormState extends State<SignInForm> {
                               style: ButtonStyle(
                                   backgroundColor:
                                       MaterialStateProperty.all<Color>(
-                                          Colors.deepPurple.shade400),
+                                          Colors.grey.shade800),
                                   shape: MaterialStateProperty.all<
                                           RoundedRectangleBorder>(
                                       RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(30),
                                           side: BorderSide(
-                                              color: Colors.black12)))),
+                                              color: Colors.white)))),
                               onPressed: () {},
                               child: Container(
                                 width:
