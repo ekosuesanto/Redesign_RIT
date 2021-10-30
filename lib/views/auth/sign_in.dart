@@ -155,8 +155,8 @@ class _SignInFormState extends State<SignInForm> {
                               onPressed: () { Navigator.push(
                   context,
                   PageTransition(
-                      duration: Duration( seconds: 2),
-                        reverseDuration: Duration(seconds: 3),
+                      duration: Duration( milliseconds: 1500),
+                        reverseDuration: Duration(milliseconds: 1500),
                     type: PageTransitionType.rightToLeft,
                     child: RegisterView(),
                   ),
