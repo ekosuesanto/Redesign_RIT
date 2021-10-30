@@ -9,7 +9,7 @@ class RegisterView extends StatelessWidget {
               leading: Builder(
     builder: (BuildContext context) {
       return IconButton(
-        icon: const Icon(Icons.angle_left),
+        icon: const Icon(Icons.chevron_left),
         onPressed: () { Scaffold.of(context).openDrawer(); },
         tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
       );
