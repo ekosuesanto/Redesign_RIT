@@ -157,7 +157,7 @@ class _SignInFormState extends State<SignInForm> {
                   PageTransition(
                       duration: Duration( seconds: 3),
                         reverseDuration: Duration(seconds: 3),
-                    type: PageTransitionType.leftToRight,
+                    type: PageTransitionType.rightToLeft,
                     child: RegisterView(),
                   ),
                 );
