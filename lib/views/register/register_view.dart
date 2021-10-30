@@ -62,21 +62,8 @@ class _SignUpFormState extends State<SignUpForm> {
           key: _formKey,
           child: Column(
             children: [
-              Padding(
-      padding: const EdgeInsets.only(bottom: 20.0),
-      child: TextFormField(
-        decoration: InputDecoration(
-          labelText: "Name",
-        ),
-        validator: (value) {
-                  if (value!.isEmpty) {
-                    return 'Name is required';
-                  }
-                  return null;
-                },
-        controller: _nameCtrl,
-      ),
-    )
+              Container( child : Text("Text1")), 
+              Container( child : Text("Text2"))
             ],
           ),
         ),
@@ -92,7 +79,7 @@ class _SignUpFormState extends State<SignUpForm> {
         subtitle: 'Choose a role that better defines you',
         content: Container(
           child: Row(
-            children: <Widget>[
+            children: [
               Container( child : Text("Text1")), 
               Container( child : Text("Text2"))
             ],
@@ -135,6 +122,7 @@ class _SignUpFormState extends State<SignUpForm> {
                       image: AssetImage( 'assets/onboarding/handing-out-offer-letter.png')),
                       ),
                       Container( 
+                          
                           child : stepper 
                       ) , 
                       Container( 
