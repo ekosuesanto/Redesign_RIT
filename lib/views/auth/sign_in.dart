@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
+import 'packege:helloworld/view/register/register_view.dart';
 
 class SignIn extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -150,7 +151,55 @@ class _SignInFormState extends State<SignInForm> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             OutlinedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                  Navigator.push( 
+
+                    context, 
+
+                    PageRouteBuilder( 
+
+                      transitionsBuilder: 
+
+                          (context, animation, secondaryAnimation, child) { 
+
+                        return ScaleTransition( 
+
+                          alignment: Alignment.center, 
+
+                          scale: Tween<double>(begin: 0.1, end: 1).animate( 
+
+                            CurvedAnimation( 
+
+                              parent: animation, 
+
+                              curve: Curves.bounceIn, 
+
+                            ), 
+
+                          ), 
+
+                          child: child, 
+
+                        ); 
+
+                      }, 
+
+                      transitionDuration: Duration(seconds: 2), 
+
+                      pageBuilder: (BuildContext context, 
+
+                          Animation<double> animation, 
+
+                          Animation<double> secondaryAnimation) { 
+
+                        return RegisterView(); 
+
+                      }, 
+
+                    ), 
+
+                  ); 
+                              },
                               style: ButtonStyle(
                                 side: MaterialStateProperty.all<BorderSide>(
                                   BorderSide(
