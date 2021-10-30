@@ -172,7 +172,7 @@ class _SignInFormState extends State<SignInForm> {
 
                               parent: animation, 
 
-                              curve: Curves.easeIn, 
+                              curve: Curves.fadeIn, 
 
                             ), 
 
