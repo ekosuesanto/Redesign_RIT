@@ -20,6 +20,7 @@ class RegisterView extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: Scaffold( 
+          appBar : AppBar(), 
           body: SignUpForm() 
       ),
     );
