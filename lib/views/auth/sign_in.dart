@@ -27,8 +27,9 @@ class _SignInFormState extends State<SignInForm> {
     return LayoutBuilder(builder: (context, constraint) {
       return SingleChildScrollView(
         physics: ScrollPhysics(),
-        reverse: true,
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+        reverse: false,
+        primary:true, 
+        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.manual,
         child: ConstrainedBox(
           constraints: BoxConstraints(
             minHeight: constraint.maxHeight,
@@ -41,7 +42,7 @@ class _SignInFormState extends State<SignInForm> {
                 Container(
                   alignment: Alignment.bottomCenter,
                   width: MediaQuery.of(context).size.width,
-                  height: 300,
+                  height: 250,
                   child: Image(
                       image: AssetImage(
                           'assets/onboarding/one-week-before-your-employee-s-first-day.png')),
@@ -59,6 +60,13 @@ class _SignInFormState extends State<SignInForm> {
                         ),
                         alignment: Alignment.centerLeft,
                       ),
+                      SizedBox(height: 5), 
+                      Container(child: Row( mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,children: [ 
+                          Text("Already account? Please",style:TextStyle(fontSize:12,color:Colors.grey[600])),
+                  SizedBox(width:2), 
+                          Text("Sign In.",style:TextStyle(fontSize:12,color:Colors.grey[600], fontWeight: FontWeight.bold),)
+                      ]),alignment: Alignment.centerLeft),
                       SizedBox(
                         height: 40,
                       ),
