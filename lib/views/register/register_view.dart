@@ -22,6 +22,7 @@ class RegisterView extends StatelessWidget {
       home: Scaffold( 
           appBar : AppBar( 
               backgroundColor : Colors.transparent, 
+              elevation:0 , 
           ), 
           body: SignUpForm() 
       ),
