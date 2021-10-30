@@ -73,7 +73,7 @@ class _SignUpFormState extends State<SignUpForm> {
                     return 'Name is required';
                   }
                   return null;
-                },,
+                },
         controller: _nameCtrl,
       ),
     )
