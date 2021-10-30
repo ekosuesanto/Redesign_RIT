@@ -11,7 +11,7 @@ class RegisterView extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(
-      primarySwatch: Colors.whiteSmoke,
+      primarySwatch: Colors.accents,
     ).copyWith(
       secondary: Colors.green,
     ),
