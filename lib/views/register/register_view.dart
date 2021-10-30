@@ -124,40 +124,7 @@ class _SignUpFormState extends State<SignUpForm> {
         backText: 'PREV',
       ),
     );
-  @override
-  Widget build(BuildContext context) {
-      return LayoutBuilder(builder: (context, constraint) {
-      return SingleChildScrollView(
-        physics: ScrollPhysics(),
-        reverse: false,
-        primary:true, 
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.manual,
-        child: ConstrainedBox(
-          constraints: BoxConstraints(
-            minHeight: constraint.maxHeight,
-          ),
-          child: IntrinsicHeight( 
-              child : Column ( 
-                  children : [ 
-                      Container(
-                  alignment: Alignment.bottomCenter,
-                  width: MediaQuery.of(context).size.width,
-                  height: 200,
-                  child: Image(
-                      image: AssetImage( 'assets/onboarding/handing-out-offer-letter.png')),
-                      ),
-                      Container( 
-                          child : stepper 
-                      ) , 
-                      Container( 
-                          child : Text("Column 3") 
-                      ) , 
-                  ]
-              ) 
-          ) 
-        ), 
-      ) ;
-      Widget _buildTextField({
+    Widget _buildTextField({
     String? labelText,
     FormFieldValidator<String>? validator,
     TextEditingController? controller,
@@ -210,7 +177,40 @@ class _SignUpFormState extends State<SignUpForm> {
       ),
     );
   }
-     });
-      
+  @override
+  Widget build(BuildContext context) {
+      return LayoutBuilder(builder: (context, constraint) {
+      return SingleChildScrollView(
+        physics: ScrollPhysics(),
+        reverse: false,
+        primary:true, 
+        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.manual,
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            minHeight: constraint.maxHeight,
+          ),
+          child: IntrinsicHeight( 
+              child : Column ( 
+                  children : [ 
+                      Container(
+                  alignment: Alignment.bottomCenter,
+                  width: MediaQuery.of(context).size.width,
+                  height: 200,
+                  child: Image(
+                      image: AssetImage( 'assets/onboarding/handing-out-offer-letter.png')),
+                      ),
+                      Container( 
+                          child : stepper 
+                      ) , 
+                      Container( 
+                          child : Text("Column 3") 
+                      ) , 
+                  ]
+              ) 
+          ) 
+        ), 
+      ) ;
+      });
+   
     }
   }
