@@ -137,8 +137,8 @@ class _SignInFormState extends State<SignInForm> {
                           child: Text(
                             "Forgot credential?",
                             style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                color: Colors.grey[600] , fontWeight:FontWeight.bold),
+                                fontWeight: FontWeight.bold,
+                                color: Colors.grey[600] ),
                           ),
                         ),
                       ),
