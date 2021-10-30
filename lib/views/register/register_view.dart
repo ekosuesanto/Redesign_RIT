@@ -183,7 +183,7 @@ class _SignUpFormState extends State<SignUpForm> {
   }) {
     final isActive = name == selectedRole;
 
-    return Expanded(
+    return Container(
       child: AnimatedContainer(
         duration: Duration(milliseconds: 200),
         curve: Curves.easeInOut,
