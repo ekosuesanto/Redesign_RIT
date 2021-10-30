@@ -114,7 +114,7 @@ class _SignInFormState extends State<SignInForm> {
                                     BorderRadius.all(Radius.circular(40.0))),
                             focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: Color(0xFFD2B4DE),
+                                    color: Colors.grey,
                                     width: 2.0,
                                     style: BorderStyle.solid),
                                 borderRadius:
