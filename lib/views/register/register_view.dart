@@ -47,12 +47,14 @@ class SignUpForm extends StatefulWidget {
 }
 
 class _SignUpFormState extends State<SignUpForm> {
-    final _formKey = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>();
   String? selectedRole = 'Writer';
   final TextEditingController _nameCtrl = TextEditingController();
   final TextEditingController _emailCtrl = TextEditingController();
 
-    final steps = [
+  @override
+  Widget build(BuildContext context) {
+      final steps = [
       CoolStep(
         title: 'Basic Information',
         subtitle: 'Please fill some of the basic information to get started',
@@ -124,24 +126,39 @@ class _SignUpFormState extends State<SignUpForm> {
         backText: 'PREV',
       ),
     );
-    Widget _buildTextField({
-    String? labelText,
-    FormFieldValidator<String>? validator,
-    TextEditingController? controller,
-  }) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 20.0),
-      child: TextFormField(
-        decoration: InputDecoration(
-          labelText: labelText,
-        ),
-        validator: validator,
-        controller: controller,
-      ),
-    );
-  }
-
-  Widget _buildSelector({
+      return LayoutBuilder(builder: (context, constraint) {
+      return SingleChildScrollView(
+        physics: ScrollPhysics(),
+        reverse: false,
+        primary:true, 
+        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.manual,
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            minHeight: constraint.maxHeight,
+          ),
+          child: IntrinsicHeight( 
+              child : Column ( 
+                  children : [ 
+                      Container(
+                  alignment: Alignment.bottomCenter,
+                  width: MediaQuery.of(context).size.width,
+                  height: 200,
+                  child: Image(
+                      image: AssetImage( 'assets/onboarding/handing-out-offer-letter.png')),
+                      ),
+                      Container( 
+                          child : stepper 
+                      ) , 
+                      Container( 
+                          child : Text("Column 3") 
+                      ) , 
+                  ]
+              ) 
+          ) 
+        ), 
+      ) ;
+      });
+   Widget _buildSelector({
     BuildContext? context,
     required String name,
   }) {
@@ -177,40 +194,5 @@ class _SignUpFormState extends State<SignUpForm> {
       ),
     );
   }
-  @override
-  Widget build(BuildContext context) {
-      return LayoutBuilder(builder: (context, constraint) {
-      return SingleChildScrollView(
-        physics: ScrollPhysics(),
-        reverse: false,
-        primary:true, 
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.manual,
-        child: ConstrainedBox(
-          constraints: BoxConstraints(
-            minHeight: constraint.maxHeight,
-          ),
-          child: IntrinsicHeight( 
-              child : Column ( 
-                  children : [ 
-                      Container(
-                  alignment: Alignment.bottomCenter,
-                  width: MediaQuery.of(context).size.width,
-                  height: 200,
-                  child: Image(
-                      image: AssetImage( 'assets/onboarding/handing-out-offer-letter.png')),
-                      ),
-                      Container( 
-                          child : stepper 
-                      ) , 
-                      Container( 
-                          child : Text("Column 3") 
-                      ) , 
-                  ]
-              ) 
-          ) 
-        ), 
-      ) ;
-      });
-   
     }
   }
