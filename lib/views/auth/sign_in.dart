@@ -151,26 +151,13 @@ class _SignInFormState extends State<SignInForm> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             OutlinedButton(
-                              onPressed: () {
-                                  Navigator.push( 
-
-                    context, 
-
-                    PageRouteBuilder( 
-
-                      transitionsBuilder: 
-
-                          (context, animation, secondaryAnimation, child) { 
-
-                        return 
-                          
-                      transitionDuration: Duration(seconds: 2), 
-
-                      pageBuilder: (BuildContext context, 
-
-                          Animation<double> animation, 
-
-                          Animation<double> secondaryAnimation) { 
+                              onPressed: () { Navigator.push( 
+                                  context, 
+                                  PageRouteBuilder( 
+                                      pageBuilder: ( 
+                                          BuildContext context, 
+                                          <double> animation, 
+                                          Animation<double> secondaryAnimation) { 
 
                         return RegisterView(); 
 
@@ -178,7 +165,7 @@ class _SignInFormState extends State<SignInForm> {
 
                     ), 
 
-                  ); 
+                  ), 
                               },
                               style: ButtonStyle(
                                 side: MaterialStateProperty.all<BorderSide>(
