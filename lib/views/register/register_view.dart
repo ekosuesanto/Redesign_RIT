@@ -98,15 +98,8 @@ class _SignUpFormState extends State<SignUpForm> {
         content: Container(
           child: Row(
             children: <Widget>[
-              _buildSelector(
-                context: context,
-                name: 'Writer',
-              ),
-              SizedBox(width: 5.0),
-              _buildSelector(
-                context: context,
-                name: 'Editor',
-              ),
+              Container( child : Text("Text1")), 
+              Container( child : Text("Text1"))
             ],
           ),
         ),
@@ -177,40 +170,5 @@ class _SignUpFormState extends State<SignUpForm> {
       ),
     );
   }
-    Widget _buildSelector({
-    BuildContext? context,
-    required String name,
-  }) {
-    final isActive = name == selectedRole;
-
-    return Container(
-      child: AnimatedContainer(
-        duration: Duration(milliseconds: 200),
-        curve: Curves.easeInOut,
-        decoration: BoxDecoration(
-          color: isActive ? Theme.of(context!).primaryColor : null,
-          border: Border.all(
-            width: 0,
-          ),
-          borderRadius: BorderRadius.circular(8.0),
-        ),
-        child: RadioListTile(
-          value: name,
-          activeColor: Colors.white,
-          groupValue: selectedRole,
-          onChanged: (String? v) {
-            setState(() {
-              selectedRole = v;
-            });
-          },
-          title: Text(
-            name,
-            style: TextStyle(
-              color: isActive ? Colors.white : null,
-            ),
-          ),
-        ),
-      ),
-    );
-  }
+    
   }
