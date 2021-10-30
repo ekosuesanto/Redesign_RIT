@@ -152,20 +152,16 @@ class _SignInFormState extends State<SignInForm> {
                           children: [
                             OutlinedButton(
                               onPressed: () { Navigator.push( 
-                                  context, 
-                                  PageRouteBuilder( 
-                                      pageBuilder: ( 
-                                          BuildContext context, 
-                                          <double> animation, 
-                                          Animation<double> secondaryAnimation) { 
 
-                        return RegisterView(); 
+                    context, 
 
-                      }, 
+                    MaterialPageRoute( 
+
+                      builder: (_) => RegisterView(), 
 
                     ), 
 
-                  ), 
+                  ); 
                               },
                               style: ButtonStyle(
                                 side: MaterialStateProperty.all<BorderSide>(
