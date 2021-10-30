@@ -62,26 +62,21 @@ class _SignUpFormState extends State<SignUpForm> {
           key: _formKey,
           child: Column(
             children: [
-              _buildTextField(
-                labelText: 'Name',
-                validator: (value) {
+              Padding(
+      padding: const EdgeInsets.only(bottom: 20.0),
+      child: TextFormField(
+        decoration: InputDecoration(
+          labelText: "Name",
+        ),
+        validator: (value) {
                   if (value!.isEmpty) {
                     return 'Name is required';
                   }
                   return null;
-                },
-                controller: _nameCtrl,
-              ),
-              _buildTextField(
-                labelText: 'Email Address',
-                validator: (value) {
-                  if (value!.isEmpty) {
-                    return 'Email address is required';
-                  }
-                  return null;
-                },
-                controller: _emailCtrl,
-              ),
+                },,
+        controller: _nameCtrl,
+      ),
+    )
             ],
           ),
         ),
@@ -99,7 +94,7 @@ class _SignUpFormState extends State<SignUpForm> {
           child: Row(
             children: <Widget>[
               Container( child : Text("Text1")), 
-              Container( child : Text("Text1"))
+              Container( child : Text("Text2"))
             ],
           ),
         ),
@@ -154,21 +149,6 @@ class _SignUpFormState extends State<SignUpForm> {
    
           
     }
-    Widget _buildTextField({
-    String? labelText,
-    FormFieldValidator<String>? validator,
-    TextEditingController? controller,
-  }) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 20.0),
-      child: TextFormField(
-        decoration: InputDecoration(
-          labelText: labelText,
-        ),
-        validator: validator,
-        controller: controller,
-      ),
-    );
-  }
+    
     
   }
