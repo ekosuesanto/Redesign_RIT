@@ -11,8 +11,8 @@ class RegisterView extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(
-      primarySwatch: const Colors.white,
-    ), 
+           primarySwatch: const Colors.transparent,
+        ), 
         visualDensity: VisualDensity.adaptivePlatformDensity,
         fontFamily: GoogleFonts.poppins().fontFamily,
       ),
