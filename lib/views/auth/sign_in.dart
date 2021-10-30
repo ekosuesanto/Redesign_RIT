@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
-import 'packege:helloworld/view/register/register_view.dart';
+import 'package:helloworld/view/register/register_view.dart';
 
 class SignIn extends StatelessWidget {
   Widget build(BuildContext context) {

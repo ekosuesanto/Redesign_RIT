@@ -22,7 +22,7 @@ class _SignUpFormState extends State<SignUpForm> {
   @override
   Widget build(BuildContext context) {
       return Container ( 
-          child: Text("Sign Up "), 
+          child: Text("Sign Up Form"), 
       ) ;
   }
 }
