@@ -157,10 +157,7 @@ class _SignUpFormState extends State<SignUpForm> {
           ) 
         ), 
       ) ;
-      
-     });
-  }
-  Widget _buildTextField({
+      Widget _buildTextField({
     String? labelText,
     FormFieldValidator<String>? validator,
     TextEditingController? controller,
@@ -213,4 +210,7 @@ class _SignUpFormState extends State<SignUpForm> {
       ),
     );
   }
-}
+     });
+      
+    }
+  }
