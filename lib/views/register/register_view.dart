@@ -78,7 +78,7 @@ class _SignUpFormState extends State<SignUpForm> {
                       ),
                       Container( 
                           
-                          child : Text("") 
+                          child : Text("Text ") 
                       ) , 
                       Container( 
                           child : Text("Column 3") 
