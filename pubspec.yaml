@@ -50,7 +50,7 @@ flutter:
     - assets/svg/facebook.svg
     - assets/svg/twitter.svg
     - assets/svg/instagram.svg
-    - assets/onboarding/*
+    - assets/onboarding*
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
