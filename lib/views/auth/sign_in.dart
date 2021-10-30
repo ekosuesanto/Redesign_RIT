@@ -183,7 +183,7 @@ class _SignInFormState extends State<SignInForm> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
-                                      color: Color(0xFF8E44AD)),
+                                      color: Colors.black),
                                 ),
                               ),
                             ),
