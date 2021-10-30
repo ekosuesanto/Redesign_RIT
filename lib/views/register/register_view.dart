@@ -23,6 +23,15 @@ class RegisterView extends StatelessWidget {
           appBar : AppBar( 
               backgroundColor : Colors.transparent, 
               elevation:0 , 
+              leading: Builder(
+    builder: (BuildContext context) {
+      return IconButton(
+        icon: const Icon(Icons.chevron_left),
+        onPressed: () { Scaffold.of(context).openDrawer(); },
+        tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+      );
+    },
+  ),
           ), 
           body: SignUpForm() 
       ),
