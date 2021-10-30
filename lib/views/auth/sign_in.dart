@@ -129,7 +129,7 @@ class _SignInFormState extends State<SignInForm> {
                       ),
                       SizedBox(
                         height: 20,
-                      ),
+                      ) , 
                       GestureDetector(
                         onTap: () {},
                         child: Container(
@@ -138,7 +138,7 @@ class _SignInFormState extends State<SignInForm> {
                             "Forgot credential?",
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
-                                color: Color(0xFFD2B4DE)),
+                                color: Colors.grey[600]),
                           ),
                         ),
                       ),
