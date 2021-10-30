@@ -65,7 +65,7 @@ class _SignUpFormState extends State<SignUpForm> {
                       Container(
                   alignment: Alignment.bottomCenter,
                   width: MediaQuery.of(context).size.width,
-                  height: 250,
+                  height: 200,
                   child: Image(
                       image: AssetImage( 'assets/onboarding/handing-out-offer-letter.png')),
                       ),
