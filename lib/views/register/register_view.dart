@@ -74,10 +74,11 @@ class _SignUpFormState extends State<SignUpForm> {
                   child: Image(
                       image: AssetImage( 'assets/onboarding/handing-out-offer-letter.png')),
                       ),
-                      BoxConstraints( 
-                          minWidth : constraint.maxWidth, 
-                          minHeight : constraint.maxHeight
-                          ,child : MultiWizard(
+                      ConstrainedBox( 
+                          constraints: BoxConstraints(
+            minHeight: constraint.maxHeight,
+          ),
+                          child : MultiWizard(
                              steps: [ 
                                  WizardStep(
                 showPrevious: false, // Removes the previous button
