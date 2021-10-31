@@ -115,7 +115,7 @@ class _SignUpFormState extends State<SignUpForm> {
               crossAxisAlignment: CrossAxisAlignment.start,children: [ 
                           Text("Please enter your",style:TextStyle(fontSize:12,color:Colors.grey[600])),
                   SizedBox(width:2), 
-                          Text("Full Name.",style:TextStyle(fontSize:12,color:Colors.grey[600], fontWeight: FontWeight.bold),)
+                          Text("Fullname.",style:TextStyle(fontSize:12,color:Colors.grey[600], fontWeight: FontWeight.bold),)
                       ]),alignment: Alignment.centerLeft), 
                           ] 
                           ) 
