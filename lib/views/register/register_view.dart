@@ -77,7 +77,7 @@ class _SignUpFormState extends State<SignUpForm> {
                       Center(
                         child : SizedBox( 
                           width: 500,
-          height: MediaQuery.of(context).size.height - 200, 
+          height: MediaQuery.of(context).size.height - 230, 
                           child : MultiWizard(
                              steps: [ 
                                  WizardStep(
