@@ -75,7 +75,9 @@ class _SignUpFormState extends State<SignUpForm> {
                       image: AssetImage( 'assets/onboarding/handing-out-offer-letter.png')),
                       ),
                       Container( 
-                          child : MultiWizard(
+                          width : double.infinity, 
+                          height : double.infinity
+                          ,child : MultiWizard(
                              steps: [ 
                                  WizardStep(
                 showPrevious: false, // Removes the previous button
