@@ -77,7 +77,7 @@ class _SignUpFormState extends State<SignUpForm> {
                       Center(
                         child : SizedBox( 
                           width: 500,
-          height: 300, 
+          height: MediaQuery.of(context).size.width - 200, 
                           child : MultiWizard(
                              steps: [ 
                                  WizardStep(
@@ -178,9 +178,7 @@ class _SignUpFormState extends State<SignUpForm> {
                           ),
                       ) , 
                           ), 
-                      Container( 
-                          child : Text("Column 3") 
-                      ) , 
+                      
                   ]
               ) 
           ) 
