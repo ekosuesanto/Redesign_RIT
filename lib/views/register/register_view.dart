@@ -117,7 +117,7 @@ class _SignUpFormState extends State<SignUpForm> {
                         }
                       },
                       onSaved: (value) {
-                        his._nameCtrl = value!;
+                        this._nameCtrl = value!;
                       },
                     ),
                   ),
@@ -125,8 +125,8 @@ class _SignUpFormState extends State<SignUpForm> {
               ), 
                              ], 
                              finishFunction: () {
-              if (_key.currentState!.validate()) {
-                _key.currentState!.save();
+              if (_formKey.currentState!.validate()) {
+                _formKey.currentState!.save();
                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                   content: Text('Welcome $name!'),
                   duration: Duration(seconds: 5),
