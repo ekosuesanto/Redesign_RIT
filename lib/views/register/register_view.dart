@@ -74,6 +74,8 @@ class _SignUpFormState extends State<SignUpForm> {
                   child: Image(
                       image: AssetImage( 'assets/onboarding/handing-out-offer-letter.png')),
                       ),
+                      Center(
+                          child :
                       SizedBox( 
                           width : 360,
                           child : MultiWizard(
@@ -136,6 +138,7 @@ class _SignUpFormState extends State<SignUpForm> {
             },
                           ),
                       ) , 
+                          ), 
                       Container( 
                           child : Text("Column 3") 
                       ) , 
