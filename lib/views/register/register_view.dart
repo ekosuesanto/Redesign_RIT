@@ -76,7 +76,7 @@ class _SignUpFormState extends State<SignUpForm> {
                       ),
                       Container(
                           padding : EdgeInsets.only(
-                      left: 24.0, right: 24.0, top: 15.0, bottom: 15.0), 
+                      left: 24.0, right: 24.0, top: 30.0, bottom: 0), 
                             width : MediaQuery.of(context).size.width, 
                         child: Text(
                           "Sign Up",
@@ -111,7 +111,7 @@ class _SignUpFormState extends State<SignUpForm> {
               crossAxisAlignment: CrossAxisAlignment.start, 
                       children: [ 
                           
-                      SizedBox(height: 5), 
+                       
                       Container(child: Row( mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,children: [ 
                           Text("Please enter your",style:TextStyle(fontSize:12,color:Colors.grey[600])),
