@@ -77,7 +77,7 @@ class _SignUpFormState extends State<SignUpForm> {
                       Center(
                         child : SizedBox( 
                           width: 500,
-          height: 500,
+          height: 500, 
                           child : MultiWizard(
                              steps: [ 
                                  WizardStep(
@@ -90,12 +90,9 @@ class _SignUpFormState extends State<SignUpForm> {
                     alignment: WrapAlignment.center,
                     crossAxisAlignment: WrapCrossAlignment.center,
                     children: [
-                      ClipRect(
-                        child: Image.network(
-                            "https://i0.wp.com/www.logoworks.com/blog/wp-content/uploads/2014/03/fruit-vegetable-logos-templates-logo-designs-037.png?w=325&ssl=1"),
-                      ),
+                      
                       SizedBox(
-                        height: 10,
+                        height: 30,
                       ),
                       Text(
                         "Welcome to the most amazing app ever!",
