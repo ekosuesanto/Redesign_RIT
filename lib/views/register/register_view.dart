@@ -117,7 +117,7 @@ class _SignUpFormState extends State<SignUpForm> {
                         }
                       },
                       onSaved: (value) {
-                        name = value!;
+                        _nameCtrl = value!;
                       },
                     ),
                   ),
