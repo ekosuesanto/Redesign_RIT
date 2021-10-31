@@ -50,7 +50,7 @@ class _SignUpFormState extends State<SignUpForm> {
   final _formKey = GlobalKey<FormState>();
   
   String? _nameCtrl;
-  final TextEditingController _emailCtrl = TextEditingController();
+  Strong? _emailCtrl;
 
   @override
   Widget build(BuildContext context) {
