@@ -105,7 +105,7 @@ class _SignUpFormState extends State<SignUpForm> {
                                  WizardStep(
                 child: Center(
                   child: Form(
-                    key: _key,
+                    key: _formKey,
                     child: TextFormField(
                       autovalidateMode: AutovalidateMode.always,
                       decoration: InputDecoration(hintText: 'Your name'),
