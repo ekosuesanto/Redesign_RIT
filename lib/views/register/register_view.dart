@@ -77,7 +77,7 @@ class _SignUpFormState extends State<SignUpForm> {
                       Center(
                         child : SizedBox( 
                           width: 500,
-          height: 500, 
+          height: 300, 
                           child : MultiWizard(
                              steps: [ 
                                  WizardStep(
