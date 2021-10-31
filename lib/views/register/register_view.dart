@@ -76,8 +76,8 @@ class _SignUpFormState extends State<SignUpForm> {
                       ),
                       Container( 
                           child : MultiWizard(
-            steps: [
-              WizardStep(
+                             steps: [ 
+                                 WizardStep(
                 showPrevious: false, // Removes the previous button
                 nextFunction: () => print('You pressed the next button'),
                 child: Container(
@@ -87,8 +87,9 @@ class _SignUpFormState extends State<SignUpForm> {
                     alignment: WrapAlignment.center,
                     crossAxisAlignment: WrapCrossAlignment.center,
                     children: [
-                      Image(
-                      image: AssetImage( 'assets/onboarding/handing-out-offer-letter.png')),
+                      ClipRect(
+                        child: Image.network(
+                            "https://i0.wp.com/www.logoworks.com/blog/wp-content/uploads/2014/03/fruit-vegetable-logos-templates-logo-designs-037.png?w=325&ssl=1"),
                       ),
                       SizedBox(
                         height: 10,
@@ -101,7 +102,7 @@ class _SignUpFormState extends State<SignUpForm> {
                   ),
                 ),
               ),
-              WizardStep(
+                                 WizardStep(
                 child: Center(
                   child: Form(
                     key: _key,
@@ -116,14 +117,14 @@ class _SignUpFormState extends State<SignUpForm> {
                         }
                       },
                       onSaved: (value) {
-                        _nameCtrl = value!;
+                        name = value!;
                       },
                     ),
                   ),
                 ),
-              ),
-            ],
-            finishFunction: () {
+              ), 
+                             ], 
+                             finishFunction: () {
               if (_key.currentState!.validate()) {
                 _key.currentState!.save();
                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -132,7 +133,7 @@ class _SignUpFormState extends State<SignUpForm> {
                 ));
               }
             },
-          ),
+                          ),
                       ) , 
                       Container( 
                           child : Text("Column 3") 
