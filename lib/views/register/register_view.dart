@@ -49,7 +49,7 @@ class SignUpForm extends StatefulWidget {
 class _SignUpFormState extends State<SignUpForm> {
   final _formKey = GlobalKey<FormState>();
   
-  final TextEditingController _nameCtrl = TextEditingController();
+  String? _nameCtrl;
   final TextEditingController _emailCtrl = TextEditingController();
 
   @override
@@ -117,7 +117,7 @@ class _SignUpFormState extends State<SignUpForm> {
                         }
                       },
                       onSaved: (value) {
-                        this._nameCtrl = value!;
+                        _nameCtrl = value!;
                       },
                     ),
                   ),
@@ -128,7 +128,7 @@ class _SignUpFormState extends State<SignUpForm> {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: Text('Welcome $name!'),
+                  content: Text('Welcome $_nameCtrl!'),
                   duration: Duration(seconds: 5),
                 ));
               }
