@@ -115,8 +115,28 @@ class _SignUpFormState extends State<SignUpForm> {
               crossAxisAlignment: CrossAxisAlignment.start,children: [ 
                           Text("Please enter your",style:TextStyle(fontSize:12,color:Colors.grey[600])),
                   SizedBox(width:2), 
-                          Text("Fullname.",style:TextStyle(fontSize:12,color:Colors.grey[600], fontWeight: FontWeight.bold),)
+                          Text("Email.",style:TextStyle(fontSize:12,color:Colors.grey[600], fontWeight: FontWeight.bold),)
                       ]),alignment: Alignment.centerLeft), 
+                          SizedBox ( height: 30) , 
+                          Center (
+                          child : Form(
+                    key: _formKey,
+                    child: TextFormField(
+                      autovalidateMode: AutovalidateMode.always,
+                      decoration: InputDecoration(hintText: 'Your Email'),
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'You must have a Email!';
+                        } else if (value.length < 8) {
+                          return 'Your Email must be atleast 8 charachters long!';
+                        }
+                      },
+                      onSaved: (value) {
+                        _emailCtrl = value!;
+                      },
+                    ),
+                  ),
+                              ), 
                           ] 
                           ) 
                             ) 
