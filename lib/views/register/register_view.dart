@@ -74,6 +74,17 @@ class _SignUpFormState extends State<SignUpForm> {
                   child: Image(
                       image: AssetImage( 'assets/onboarding/handing-out-offer-letter.png')),
                       ),
+                      Container(
+                          padding : EdgeInsets.only(
+                      left: 24.0, right: 24.0, top: 15.0, bottom: 15.0), 
+                            width : MediaQuery.of(context).size.width, 
+                        child: Text(
+                          "Sign Up",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 30),
+                        ),
+                        alignment: Alignment.centerLeft,
+                      ),
                       Center(
                         child : SizedBox( 
                           width: 500,
@@ -91,25 +102,15 @@ class _SignUpFormState extends State<SignUpForm> {
                     crossAxisAlignment: WrapCrossAlignment.center,
                     children: [
                       
-                      SizedBox(
-                        height: 30,
-                      ),
                         Container ( 
                             padding : EdgeInsets.only(
-                      left: 24.0, right: 24.0, top: 15.0, bottom: 15.0), 
+                      left: 24.0, right: 24.0, top: 5.0, bottom: 15.0), 
                             width : MediaQuery.of(context).size.width, 
                       child : Column ( 
                           mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start, 
                       children: [ 
-                          Container(
-                        child: Text(
-                          "Sign Up",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 30),
-                        ),
-                        alignment: Alignment.centerLeft,
-                      ),
+                          
                       SizedBox(height: 5), 
                       Container(child: Row( mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,children: [ 
@@ -117,6 +118,7 @@ class _SignUpFormState extends State<SignUpForm> {
                   SizedBox(width:2), 
                           Text("Email.",style:TextStyle(fontSize:12,color:Colors.grey[600], fontWeight: FontWeight.bold),)
                       ]),alignment: Alignment.centerLeft), 
+                      
                           SizedBox ( height: 30) , 
                           Center (
                           child : Form(
