@@ -94,7 +94,9 @@ class _SignUpFormState extends State<SignUpForm> {
                       SizedBox(
                         height: 30,
                       ),
-                      Column ( 
+                        Container ( 
+                            width : MediaQuery.of(context).size.width, 
+                      child : Column ( 
                           mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start, 
                       children: [ 
@@ -115,6 +117,7 @@ class _SignUpFormState extends State<SignUpForm> {
                       ]),alignment: Alignment.centerLeft), 
                           ] 
                           ) 
+                            ) 
                     ],
                   ),
                 ),
