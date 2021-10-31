@@ -96,7 +96,7 @@ class _SignUpFormState extends State<SignUpForm> {
                       ),
                       Column ( 
                           mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start
+              crossAxisAlignment: CrossAxisAlignment.start, 
                       children: [ 
                           Container(
                         child: Text(
