@@ -94,10 +94,21 @@ class _SignUpFormState extends State<SignUpForm> {
                       SizedBox(
                         height: 30,
                       ),
-                      Text(
-                        "Welcome to the most amazing app ever!",
+                      Container(
+                        child: Text(
+                          "Sign Up",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 30),
+                        ),
+                        alignment: Alignment.centerLeft,
                       ),
-                      Text("Created By josat799"),
+                      SizedBox(height: 5), 
+                      Container(child: Row( mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,children: [ 
+                          Text("Please enter your",style:TextStyle(fontSize:12,color:Colors.grey[600])),
+                  SizedBox(width:2), 
+                          Text("Full Name.",style:TextStyle(fontSize:12,color:Colors.grey[600], fontWeight: FontWeight.bold),)
+                      ]),alignment: Alignment.centerLeft),
                     ],
                   ),
                 ),
