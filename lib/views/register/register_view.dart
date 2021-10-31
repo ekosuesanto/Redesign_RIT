@@ -75,8 +75,8 @@ class _SignUpFormState extends State<SignUpForm> {
                       image: AssetImage( 'assets/onboarding/handing-out-offer-letter.png')),
                       ),
                       BoxConstraints( 
-                          width : 360, 
-                          height : double.infinity
+                          minWidth : constraint.maxWidth, 
+                          minHeight : constraint.maxHeight
                           ,child : MultiWizard(
                              steps: [ 
                                  WizardStep(
