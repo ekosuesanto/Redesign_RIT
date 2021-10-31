@@ -87,7 +87,7 @@ class _SignUpFormState extends State<SignUpForm> {
                   height: double.infinity,
                   child: Wrap(
                     direction: Axis.vertical,
-                    alignment: WrapAlignment.center,
+                    alignment: WrapAlignment.start,
                     crossAxisAlignment: WrapCrossAlignment.center,
                     children: [
                       
