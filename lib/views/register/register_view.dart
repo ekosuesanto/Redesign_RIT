@@ -50,7 +50,7 @@ class _SignUpFormState extends State<SignUpForm> {
   final _formKey = GlobalKey<FormState>();
   
   String? _nameCtrl;
-  final TextEditingController _emailCtrl = TextEditingController();
+  String? _emailCtrl;
 
   @override
   Widget build(BuildContext context) {
@@ -74,10 +74,21 @@ class _SignUpFormState extends State<SignUpForm> {
                   child: Image(
                       image: AssetImage( 'assets/onboarding/handing-out-offer-letter.png')),
                       ),
+                      Container(
+                          padding : EdgeInsets.only(
+                      left: 24.0, right: 24.0, top: 30.0, bottom: 0), 
+                            width : MediaQuery.of(context).size.width, 
+                        child: Text(
+                          "Sign Up",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 30),
+                        ),
+                        alignment: Alignment.centerLeft,
+                      ),
                       Center(
                         child : SizedBox( 
                           width: 500,
-          height: 300, 
+          height: MediaQuery.of(context).size.height - 330, 
                           child : MultiWizard(
                              steps: [ 
                                  WizardStep(
@@ -91,13 +102,46 @@ class _SignUpFormState extends State<SignUpForm> {
                     crossAxisAlignment: WrapCrossAlignment.center,
                     children: [
                       
-                      SizedBox(
-                        height: 30,
-                      ),
-                      Text(
-                        "Welcome to the most amazing app ever!",
-                      ),
-                      Text("Created By josat799"),
+                        Container ( 
+                            padding : EdgeInsets.only(
+                      left: 24.0, right: 24.0, top: 5.0, bottom: 15.0), 
+                            width : MediaQuery.of(context).size.width, 
+                      child : Column ( 
+                          mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start, 
+                      children: [ 
+                          
+                       
+                      Container(child: Row( mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,children: [ 
+                          Text("Please enter your",style:TextStyle(fontSize:12,color:Colors.grey[600])),
+                  SizedBox(width:2), 
+                          Text("Email.",style:TextStyle(fontSize:12,color:Colors.grey[600], fontWeight: FontWeight.bold),)
+                      ]),alignment: Alignment.centerLeft), 
+                      
+                          SizedBox ( height: 30) , 
+                          Center (
+                          child : Form(
+                    key: _formKey,
+                    child: TextFormField(
+                      autovalidateMode: AutovalidateMode.always,
+                      decoration: InputDecoration(hintText: 'Your Email'),
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'You must have a Email!';
+                        } else if (value.length < 8) {
+                          return 'Your Email must be atleast 8 charachters long!';
+                        }
+                      },
+                      onSaved: (value) {
+                        _emailCtrl = value!;
+                      },
+                    ),
+                  ),
+                              ), 
+                          ] 
+                          ) 
+                            ) 
                     ],
                   ),
                 ),
@@ -136,9 +180,7 @@ class _SignUpFormState extends State<SignUpForm> {
                           ),
                       ) , 
                           ), 
-                      Container( 
-                          child : Text("Column 3") 
-                      ) , 
+                      
                   ]
               ) 
           ) 
