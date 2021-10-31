@@ -76,6 +76,7 @@ class _SignUpFormState extends State<SignUpForm> {
                       ),
                       ConstrainedBox( 
                           constraints: BoxConstraints(
+                              minWidth : constraint.maxWidth, 
             minHeight: constraint.maxHeight,
           ),
                           child : MultiWizard(
