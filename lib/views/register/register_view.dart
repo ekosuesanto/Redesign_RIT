@@ -75,9 +75,9 @@ class _SignUpFormState extends State<SignUpForm> {
                       image: AssetImage( 'assets/onboarding/handing-out-offer-letter.png')),
                       ),
                       Center(
-                          child :
-                      SizedBox( 
-                          width : 360,
+                        child : SizedBox( 
+                          width: 500,
+          height: 500,
                           child : MultiWizard(
                              steps: [ 
                                  WizardStep(
