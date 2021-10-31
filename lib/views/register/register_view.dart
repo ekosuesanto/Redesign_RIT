@@ -94,7 +94,9 @@ class _SignUpFormState extends State<SignUpForm> {
                       SizedBox(
                         height: 30,
                       ),
-                      Container(
+                      Column ( 
+                      children: [ 
+                          Container(
                         child: Text(
                           "Sign Up",
                           style: TextStyle(
@@ -108,7 +110,9 @@ class _SignUpFormState extends State<SignUpForm> {
                           Text("Please enter your",style:TextStyle(fontSize:12,color:Colors.grey[600])),
                   SizedBox(width:2), 
                           Text("Full Name.",style:TextStyle(fontSize:12,color:Colors.grey[600], fontWeight: FontWeight.bold),)
-                      ]),alignment: Alignment.centerLeft),
+                      ]),alignment: Alignment.centerLeft), 
+                          ] 
+                          ) 
                     ],
                   ),
                 ),
