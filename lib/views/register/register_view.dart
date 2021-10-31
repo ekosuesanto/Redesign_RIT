@@ -95,6 +95,7 @@ class _SignUpFormState extends State<SignUpForm> {
                         height: 30,
                       ),
                         Container ( 
+                            padding : EdgeInset.all(20) , 
                             width : MediaQuery.of(context).size.width, 
                       child : Column ( 
                           mainAxisAlignment: MainAxisAlignment.start,
